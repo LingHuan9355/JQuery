@@ -13,17 +13,17 @@
     
     <script type="text/javascript">
        $(function(){
-          $("a").click(function(){
+          	$("a").click(function(){
 
-              //使用load方法处理ajax
-              var url = this.href;
-              var args = {"time":new Date()};
-              $("#msg").load(url,args);
-
-              return false;
-              });
-
+	              //使用load方法处理ajax
+	              var url = this.href;
+	              var args = {"time":new Date()};
+	              $("#msg").load(url,args);
+	
+	              return false;
             });
+
+        });
     
     
     </script>

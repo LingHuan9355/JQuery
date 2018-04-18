@@ -1,5 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">  <head>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html >
+  <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title>People at Clearleft</title>
   <style type="text/css">
@@ -8,7 +11,7 @@
   
    <script type="text/javascript">
       window.onload = function(){
-        var aNodes = document.getElementByTagName("a");
+        var aNodes = document.getElementsByTagName("a");
         for(var i=0; i<aNodes.length;i++){
            aNodes[i].onclick = function(){
              
@@ -18,8 +21,9 @@
              
              request.open(method,url);
              request.send(null);
-           
-             request.onreadystatechange =function(){
+             
+             request.onreadystatechange = function(){
+                // alert(request.readyState);
                 if(request.readyState == 4){
                    if(request.status == 200 || request.status == 304){
                       document.getElementById("details").innerHTML = request.responseText;
@@ -41,15 +45,9 @@
 <body>
   <h1>People</h1>
   <ul>
-    <li>
-      <a href="files/andy.html">Andy</a>
-    </li>
-    <li>
-      <a href="files/richard.html">Richard</a>
-    </li>
-    <li>
-      <a href="files/jeremy.html">Jeremy</a>
-    </li>
+    <li><a href="files/andy.html">Andy</a></li>
+    <li><a href="files/richard.html">Richard</a></li>
+    <li><a href="files/jeremy.html">Jeremy</a></li>
   </ul>
   <div id="details"></div>
 </body>
