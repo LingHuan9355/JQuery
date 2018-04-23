@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hr.beans.ShoppingCart;
 
 /**
@@ -42,17 +43,30 @@ public class AddToCartServlet extends HttpServlet {
 	
 		//4.准备响应的json对象
 		//如从服务器端返回json字符串，则属性名必须使用双引号
-		StringBuilder sb = new StringBuilder();
+		/*StringBuilder sb = new StringBuilder();
 		sb.append("{").append("\"bookName\":\"" + bookName + "\"")
 		  .append(",")
 		  .append("\"totalBookNumber\":" + sc.getTotalBookNumber())
 		  .append(",")
 		  .append("\"totalMoney\":" + sc.getTotalMoney())
-		  .append("}");
+		  .append("}");*/
+		   
+		//Jackson 第三方工具包
+		  //1).导入jar包
+		  //2).创建org.codehaus.jackson.map.ObjectMappter 对象
+		  //3).调用mapper 的writeValueAsString()方法把一个对象或集合转换成一个json字符串
+		  //4).注意：JackSon 使用getter 方法来定位json对象的属性！
+		  //5).可以通过调节注解org.codehaus.jackson.annotate.JsonIgnore
+		     //忽略某一个getter 定义的属性
+		ObjectMapper mapper = new ObjectMapper();
+		String result = mapper.writeValueAsString(sc);
+		System.out.println(result);
 		
 		//5.响应json对象
 		response.setContentType("text/javascript");
-		response.getWriter().print(sb.toString());
+		//response.getWriter().print(sb.toString());
+		
+		response.getWriter().print(result);
 		
 		
 		
