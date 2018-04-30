@@ -11,19 +11,43 @@
     <script type="text/javascript" src="script/jquery-1.7.2.js"></script>
     --%>
     <script type="text/javascript">
-       function check(){
+      /* function check(){
 			$.post("check",{username:$("#username").val()},function(data){
  				$("#info").html(data);
 			});
+       }*/
 
-       }
+       /*function byPost(){
+    	    $.post("check",{username:$("#username").val()},function(data){
+    	        $("#info").html(data);
+    	    });
+    	}*/
+
+    	/*function byGet(){
+    	    $.get("check?username="+$("#username").val(),function(data){
+    	        $("#info").html(data);
+    	    });
+    	}*/
+    	       
+    	function byAjax(){
+    	    $.ajax({
+    	        type:"POST",
+    	        url:"check",
+    	        data:{username:$("#username").val()},
+    	        dataType:"text",
+    	        success:function(data){
+    	            $("#info").html(data);
+    	        }
+    	    });
+    	}
+    	       
     </script>
   </head>
   <body>
     
     <div align="center">
       	请输入用户名：
-    	<input type="text" name="username" onblur="check()" id="username">
+    	<input type="text" name="username" onblur="byAjax()" id="username">
     	<div id="info"></div>
       
     </div>

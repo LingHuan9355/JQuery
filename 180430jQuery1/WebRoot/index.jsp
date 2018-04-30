@@ -14,7 +14,9 @@
         <a href="tagNameClassId.jsp">2.根据标签，属性，样式，id选择</a><br/>
         <a href="selector.jsp">3.DOM的遍历和筛选</a><br/>
         <a href="event.jsp">4.事件的绑定与解绑</a><br/>
-        <a href="toggle.jsp">5.toggle显示隐藏模块</a>
+        <a href="toggle.jsp">5.toggle显示隐藏模块</a><br/>
+        <a href ="ready.jsp" >6.DOM树加载ready</a><br/>
+        <a href="plugin.jsp">7.自定义jQuery插件</a>
     </div>
     
   </body>
