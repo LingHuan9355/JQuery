@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="180430jQuery1"
+  id="myeclipse.1525075447338"
+  context-root="/180430jQuery1"
+  j2ee-spec="5.0"
+  archive="180430jQuery1.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
