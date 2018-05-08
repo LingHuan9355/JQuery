@@ -12,6 +12,7 @@
         <h1><a href="checkedAll.jsp">1.全选/全不选</a></h1>
         <h1><a href="jQueryOrDom.jsp">2.jQuery 和 DOM 对象</a></h1>
         <h1><a href="basicselector_.jsp">3.1基本选择器</a></h1>
+        <h1><a href="gradationselector_.jsp">3.2层次选择器</a></h1>
     </div>
   </body>
 </html>
