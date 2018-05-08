@@ -20,7 +20,8 @@
           });
           $("#btn4").click(function(){
               $(":checkbox[name='newsletter']:checked").each(function(){
-                   alert(this.value);
+                   //alert(this.value);
+            	  alert($(this).val());
               });
           });
           $("#btn5").click(function(){
@@ -36,7 +37,8 @@
 				//jQuery 对象遍历的方式使 each, 在 each 内部的 this 是正在
 				//得到的 DOM 对象, 而不是一个 jQuery 对象
 				$("select :selected").each(function(){
-                      alert(this.value);
+                      //alert(this.value);
+					alert($(this).val());
 			    });
           });
      })
