@@ -12,13 +12,16 @@
           	$(":text:enabled").val("尚硅谷");
           });
           $("#btn2").click(function(){
+              //利用 jQuery 对象的 val() 方法改变表单内不可用 <input> 元素的值
           	$(":text:disabled").val("www.atguigu.com");
           });
           $("#btn3").click(function(){
+              //利用 jQuery 对象的 length 属性获取多选框选中的个数
               var num = $(":checkbox[name='newsletter']:checked").length;
               alert(num);
           });
           $("#btn4").click(function(){
+              //利用 jQuery 对象的 text() 方法获取下拉框选中的内容
               $(":checkbox[name='newsletter']:checked").each(function(){
                    //alert(this.value);
             	  alert($(this).val());
