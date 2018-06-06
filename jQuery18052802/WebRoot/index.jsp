@@ -15,6 +15,8 @@
         <h1><a href="ex-3.html">选择类型插入元素节点</a></h1>
         <h1><a href="dom-4.html">删除元素节点</a></h1>
         <h1><a href="ex-5.html">添加/删除新员工节点</a></h1>
+        <h1><a href="dom-5.html">复制节点</a></h1>
+        <h1><a href="dom-6.html">替换节点</a></h1>
 
        </div>
   </body>
