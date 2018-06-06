@@ -17,6 +17,9 @@
         <h1><a href="ex-5.html">添加/删除新员工节点</a></h1>
         <h1><a href="dom-5.html">复制节点</a></h1>
         <h1><a href="dom-6.html">替换节点</a></h1>
+        <h1><a href="dom-7.html">包裹节点</a></h1>
+        <h1><a href="dom-8.html">html()方法</a></h1>
+        <h1><a href="ex-2.html">val()方法的两个练习</a></h1>
 
        </div>
   </body>
