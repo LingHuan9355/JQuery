@@ -7,6 +7,7 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/script/jquery-1.7.2.js"></script>
 <script type="text/javascript">
      $(function(){
+         
           $("#btn1").click(function(){
         	//使所有的可用的单行文本框的 value 值变为 尚硅谷
           	$(":text:enabled").val("尚硅谷");
@@ -27,7 +28,7 @@
             	  alert($(this).val());
               });
           });
-          $("#btn5").click(function(){
+        /*  $("#btn5").click(function(){
         	//实际被选择的不是 select, 而是 select 的 option 子节点
 				//所以要加一个 空格. 
 				var len = $("select :selected").length;
@@ -44,6 +45,23 @@
 					alert($(this).val());
 			    });
           });
+*/
+
+         //根据下拉框根据 name属性选中，取值方法
+		  //var $item1 = $("select[name='test2'] option:eq(2)").attr("selected",true);
+          var $item2 = $("select[name='test2']").find('option:eq(3)').attr('selected','selected');
+         // var $province = $("select[name='test2'] option:eq(5)").val();
+         //取值
+         // var value1 = $item1.val();
+          var $value2 = $item2.val();
+          alert(value2);
+         
+         
+         //根据id选中，取值 方法
+          //var $select1 = $('#test2 option:eq(4)').attr('selected','selected');
+         // var $select2 = $('#test2').find('option:eq(3)').attr('selected', true);
+         // var $select3 =  $('#test2 option:eq(1)').val();
+           //alert($select3);
      })
 
 </script>
@@ -86,7 +104,7 @@
 			<select name="test2">
 				<option>浙江</option>
 				<option>辽宁</option>
-				<option selected="selected">北京</option>
+				<option>北京</option>
 				<option>天津</option>
 				<option>广州</option>
 				<option>湖北</option>
