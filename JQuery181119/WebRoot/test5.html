@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>test5.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	 <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#userMenu,#categoryMenu,#newsMenu").each(function(){
+				var pid = $(this).attr("id");
+				//alert(pid)
+				$("#"+pid+"Item1").hide();//隐藏
+			});
+		
+			$("#userMenu,#categoryMenu,#newsMenu").toggle(function(){
+				var pid = $(this).attr("id");
+				//alert(pid)
+				$("#"+pid+"Item1").show();//显示
+			},function(){
+				var pid = $(this).attr("id");
+				$("#"+pid+"Item1").hide();//隐藏
+			},function(){
+				alert("aaaaaa");
+			});
+
+		});
+	</script>
+  </head>
+  
+  <body>
+	<button>点击</button>
+	<div style="border:solid 1px red; width:100%">我是分隔符，我是分隔符</div>
+	<table width="100%" border="1" cellspacing="0" cellpadding="0">
+		<tr>
+			<td valign="top">
+				<table width="139" border="0" align="center" cellpadding="0" cellspacing="0">
+					<tr>
+						<td class="lefttitle" colspan="2">
+							<a id="userMenu" href="#" class="leftlink3">用户管理</a>
+						</td>
+					</tr>
+					<tr>
+						<td height="1" colspan="2" bgcolor="acc1de"></td>
+					</tr>
+					<tr id="userMenuItem1">
+						<td>
+							&nbsp;
+						</td>
+						<td>
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="10">
+										<img src="images/arrow_blue.jpg">
+									</td>
+									<td>
+									<a href="user/addUser.jsp" class="leftlink" target="content">用户新增</a>
+									</td>
+								</tr>
+								<tr>
+								 <td height="1" colspan="2" bgcolor="acc1de"></td>
+								</tr>
+								<tr>
+									<td width="10">
+										<img src="images/arrow_blue.jpg">
+									</td>
+									<td>
+									<a href="../doFindAllUser.do?pageRecord=10&opt=doFindAll" 
+									class="leftlink" target="content">用户查询</a>
+									</td>
+								</tr>
+								<tr>
+								 <td height="1" colspan="2" bgcolor="acc1de"></td>
+								</tr>
+								<tr>
+									<td width="10">
+										<img src="images/arrow_blue.jpg">
+									</td>
+									<td>
+									<a href="user/updateUserPwd.jsp?user.userName=${session.}" 
+									class="leftlink" target="content">密码修改</a>
+									</td>
+								</tr>
+								<tr>
+								 <td height="1" colspan="2" bgcolor="acc1de"></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr id="userMenuItem2">
+						<td height="1" colspan="2" bgcolor="acc1de"></td>
+					</tr>
+					<tr>
+						<td class="letftitle" colspan="2">
+							<a id="categoryMenu" href="#" class="leftlink3">栏目管理</a>
+						</td>
+					</tr>
+					<tr>
+						<td height="1" colspan="2" bgcolor="acc1de"></td>
+					</tr>
+					<tr id="categoryMenuItem1">
+						<td>
+							&nbsp;
+						</td>
+						<td>
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="10">
+										<img src="images/arrow_blue.jpg">
+									</td>
+									<td>
+									<a href="category/addCategory.jsp" 
+									class="leftlink" target="content">栏目新增</a>
+									</td>
+								</tr>
+								<tr>
+								 <td height="1" colspan="2" bgcolor="acc1de"></td>
+								</tr>
+								<tr>
+									<td width="10">
+										<img src="images/arrow_blue.jpg">
+									</td>
+									<td>
+									<a href="../doFindAllCategory.do?pageRecord=10&opt=doFindAll" 
+									class="leftlink" target="content">栏目查询</a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr id="categoryMenuItem2">
+						<td height="1" colspan="2" bgcolor="acc1de"></td>
+					</tr>
+					<tr>
+						<td class="letftitle" colspan="2">
+							<a id="newsMenu" href="#" class="leftlink3">新闻管理</a>
+						</td>
+					</tr>
+					<tr>
+						<td height="1" colspan="2" bgcolor="acc1de"></td>
+					</tr>
+					<tr id="newsMenuItem1">
+						<td>
+							&nbsp;
+						</td>
+						<td>
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="10">
+										<img src="images/arrow_blue.jpg">
+									</td>
+									<td>
+									<a href="news/addNews.jsp" class="leftlink" target="content">新闻新增</a>
+									</td>
+								</tr>
+								<tr>
+								 <td height="1" colspan="2" bgcolor="acc1de"></td>
+								</tr>
+								<tr>
+									<td width="10">
+										<img src="images/arrow_blue.jpg">
+									</td>
+									<td>
+									<a href="../doFindAllNews.do?pageRecord=10&opt=doFindAll" 
+									class="leftlink" target="content">新闻查询</a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr id="newsMenuItem2">
+						<td height="1" colspan="2" bgcolor="acc1de"></td>
+					</tr>
+				</table>
+			
+			</td>
+		</tr>
+	</table>
+  </body>
+</html>

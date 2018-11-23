@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>test3.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		//选择器
+		//1.标签选择器
+		//2.id选择器
+		//3.类别选择器
+		//4.属性选择器
+		//5.组合选择器
+	});	
+	
+	</script>
+  </head>
+  
+  <body>
+  <!-- 
+    <a href="#">点我</a><br/>
+    <button>点我</button><br/>
+    <input type="button"  value="点我"/><br/>
+     -->
+    <script type="text/javascript">    
+    /*1.标签选择器
+    $(function(){
+    	$("button").click(function(){
+    	});
+    		alert("标签选择器");
+    
+    }); */
+    </script>
+    <!-- ========================================== -->
+    <!-- <a href="#" id="a1">点我</a><br/>
+    <a href="#" id="a2">点我</a><br/>
+    <a href="#" id="a3">点我</a><br/>
+     -->
+    <script type="text/javascript">
+   /* 2.id选择器
+    $(function(){
+    	$("#a3").click(function(){
+    	  alert("id选择器");
+    	});
+    });*/
+    </script>
+    <!-- ============================================= -->
+    <!--
+     <a href="#" id="aa" class="c1">点我</a>
+    <div class="c2">点我</div>
+    <input type="text" class="c2"/> 
+    -->
+    <script type="text/javascript">
+    /*3.类别选择器
+     $(function(){
+        $("#aa").click(function(){
+        	alert("id选择器");	
+        });
+     	$("a").click(function(){
+    		alert("标签选择器");
+         });
+         
+     	$(".c1").click(function(){
+     	  alert("类别选择器");
+     	});
+     });  */
+    </script>
+    <!-- ====================================== -->
+    <!-- 
+    <input type="text" /><br/>
+    <input type="password" /><br/>
+    <input type="button" value="点我" /><br/> 
+     -->
+    <script type="text/javascript">
+	/*	4.属性选择器
+      $(function(){
+      	$("[type=password]").click(function(){
+      			alert("属性选择器")
+      	});
+      });
+      */
+    </script>
+    <!--================================= -->
+    <!--
+    <a href="#">点我</a><br/>
+    <button>点我</button><br/>
+    <input type="button"  value="点我"/><br/>
+    -->
+    <script type="text/javascript">
+    /*5.组合选择器
+      组合选择器——标签组合
+     $(function(){
+     	$("a,button,input").click(function(){
+     		alert("组合选择器——标签组合");
+     	});
+     });*/
+    </script>
+    <!-- ========================================== -->
+    <!--
+    <a href="#" id="a1">点我</a>
+    <a href="#" id="a2">点我</a>
+    <a href="#" id="a3">点我</a>
+    -->
+    <script type="text/javascript">
+    /*	5.组合选择器——id组合
+    	$(function(){
+    		$("#a1,#a2,#a3").click(function(){
+    		alert("组合选择器——id组合");
+    		});
+    	});
+    */
+    </script> 
+    <!-- ============================================= -->
+    <!-- <a href="#" id="aa" class="c1">点我</a>
+    <div class="c2">点我</div>
+    <input type="text" class="c2"/> 
+	 -->
+	<script type="text/javascript">
+	/*6.组合选择器——类别组合
+	$(function(){
+		$(".c1,.c2").click(function(){
+			alert("组合选择器——类别组合")
+		});
+	});	*/
+	</script>
+	 <!-- ====================================== -->
+    <!--<input type="text" /><br/>
+    <input type="password" /><br/>
+    <input type="button" value="点我" /><br/> 
+	--><script type="text/javascript">
+	/*7.组合选择器——属性组合
+	$(function(){
+		$("[type=text],[type=password],[type=button]").click(function(){
+			alert("组合选择器——属性组合");
+		});
+	});*/
+	</script>  
+	 <!-- ====================================== -->
+	 <!--
+	 <a href="#" class="c1" id="a1">点我</a>  
+	 <a href="#" class="c2" id="a2">点我</a>  
+	 <a href="#" class="c1" id="a3">点我</a>
+	 -->
+	 <script type="text/javascript">
+	 /*8.组合选择器——同级别组合
+	 $(function(){
+	 	$("a.c1#a3").click(function(){
+	 		alert("组合选择器——同级别组合");
+	 	});
+	 });*/
+	 </script>  
+	  <!-- ====================================== -->
+	  <div>
+	  		<a title="aa" href="#" >点我</a>
+	  </div>
+	  <div>
+	  		<a title="bb" href="#" >点我</a>
+	  </div>
+	  <script type="text/javascript">
+	  	$(function(){
+	  		$("div a[title=bb]").click(function(){
+	  			alert("组合选择器——上下级组合");
+	  		});
+	  	});
+	  </script>
+  </body>
+</html>
