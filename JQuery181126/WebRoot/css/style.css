@@ -1,0 +1,19 @@
+body { font:12px/19px Arial, Helvetica,sans-serif;}
+form div { margin:5px 0;}
+.int label { float:left;width:100px;text-align:right;}
+.int input { padding:1px 1px; border:1px solid #f00;}
+.sub { padding-left:100px;}
+.sub input { margin-right:10px; }
+.formtips{width: 200px;margin:2px;padding:2px;}
+.onError{
+	background:red url(/img/reg3.gif) no-repeat fixed center;
+	padding-left:25px;
+}
+.onSuccess{
+	/* 在一个div元素中设置多个背景图像（并指定他们的位置)*/
+	background:#00CC33 url(/img.reg4.gif) no-repeat fixed center;
+	padding-left:25px;
+}
+.high{
+	color:red;
+}
