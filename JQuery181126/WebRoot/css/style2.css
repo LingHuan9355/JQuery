@@ -1,0 +1,6 @@
+table { border:0;border-collapse:collapse;}
+td { font:normar 12px/17px Arial;padding:2px;width:100px;heigth:200px;}
+th { font:bold 12px/17px Arial;text-align:center;padding:2px;width:100px;heigth:200px;}
+.parent { background:#FFF38F;cursor:pointer;}
+.odd {background:#FFFFEE;} /*奇数行样式*/
+.selected {background:#FF6500;color:#F0F0F0;font:bold 12px/17px Arial;}
